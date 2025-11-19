@@ -1,0 +1,20 @@
+{
+  "name": "examen-final-practico-app-web",
+  "version": "1.0.0",
+  "description": "Proyecto final práctico - Aplicaciones Web (Tailwind CLI v4.1 setup included)",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/output.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/output.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.0"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17"
+  }
+}

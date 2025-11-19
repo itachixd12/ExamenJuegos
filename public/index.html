@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PixelSale — Ofertas de videojuegos</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+  <link rel="stylesheet" href="./output.css">
+</head>
+<body class="bg-dark text-white">
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">🎮 PixelSale</div>
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Buscar videojuego..." class="search-input" />
+        <button id="searchBtn" class="search-btn">Buscar</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Ofertas Épicas en Videojuegos</h1>
+      <p class="hero-subtitle">Descubre los mejores juegos con descuentos increíbles</p>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="filters-section">
+    <div class="filters-container">
+      <div class="filter-group">
+        <label for="storeSelect" class="filter-label">Tienda:</label>
+        <select id="storeSelect" class="filter-select">
+          <option value="">Todas</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="sortSelect" class="filter-label">Ordenar por:</label>
+        <select id="sortSelect" class="filter-select">
+          <option value="">Predeterminado</option>
+          <option value="salePrice">Precio (oferta) ↑</option>
+          <option value="-salePrice">Precio (oferta) ↓</option>
+          <option value="normalPrice">Precio (normal) ↑</option>
+          <option value="-normalPrice">Precio (normal) ↓</option>
+        </select>
+      </div>
+
+      <button id="loadMoreBtn" class="load-more-btn">Ver más</button>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-container">
+    <div id="indicators" class="indicators">
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Cargando...</span>
+      </div>
+      <div id="error" class="error hidden">Error al cargar los datos.</div>
+    </div>
+
+    <section id="gamesGrid" class="games-grid"></section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button id="closeModal" class="close-btn">✕</button>
+      <div id="modalContent" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+</body>
+</html>
